@@ -1,0 +1,149 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5205,        141]
+NotebookOptionsPosition[      4288,        116]
+NotebookOutlinePosition[      4689,        132]
+CellTagsIndexPosition[      4646,        129]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Amicable numbers", "Title",
+ CellChangeTimes->{
+  3.8691603109997816`*^9},ExpressionUUID->"61f819c2-7c5f-45ae-873f-\
+25277f727e78"],
+
+Cell["\<\
+Let d(n) be defined as the sum of proper divisors of n (numbers less than n \
+which divide evenly into n).
+If d(a) = b and d(b) = a, where a \[NotEqual] b, then a and b are an amicable \
+pair and each of a and b are called amicable numbers.
+
+For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, \
+55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, \
+71 and 142; so d(284) = 220.
+
+Evaluate the sum of all the amicable numbers under 10000.\
+\>", "Text",
+ CellChangeTimes->{
+  3.869160317680199*^9},ExpressionUUID->"dd4c90b3-03cd-4e48-83be-\
+cd347231debe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"s", "[", "n_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"DivisorSigma", "[", 
+     RowBox[{"1", ",", "n"}], "]"}], "-", "n"}]}], ";", 
+  RowBox[{
+   RowBox[{"AmicableNumberQ", "[", "n_", "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Nest", "[", 
+        RowBox[{"s", ",", "n", ",", "2"}], "]"}], "\[Equal]", "n"}], "&&", 
+      RowBox[{"!", 
+       RowBox[{
+        RowBox[{"s", "[", "n", "]"}], "\[Equal]", "n"}]}]}], ",", "True", ",",
+      "False"}], "]"}]}], ";", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"10", "^", "6"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"AmicableNumberQ", "[", "#", "]"}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.869160302263653*^9, 3.86916030226667*^9}},
+ CellLabel->"In[60]:=",ExpressionUUID->"e8623183-1c0a-4684-9b82-a5065f545653"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "220", ",", "284", ",", "1184", ",", "1210", ",", "2620", ",", "2924", ",", 
+   "5020", ",", "5564", ",", "6232", ",", "6368", ",", "10744", ",", "10856", 
+   ",", "12285", ",", "14595", ",", "17296", ",", "18416", ",", "63020", ",", 
+   "66928", ",", "66992", ",", "67095", ",", "69615", ",", "71145", ",", 
+   "76084", ",", "79750", ",", "87633", ",", "88730", ",", "100485", ",", 
+   "122265", ",", "122368", ",", "123152", ",", "124155", ",", "139815", ",", 
+   "141664", ",", "142310", ",", "153176", ",", "168730", ",", "171856", ",", 
+   "176272", ",", "176336", ",", "180848", ",", "185368", ",", "196724", ",", 
+   "202444", ",", "203432", ",", "280540", ",", "308620", ",", "319550", ",", 
+   "356408", ",", "365084", ",", "389924", ",", "399592", ",", "430402", ",", 
+   "437456", ",", "455344", ",", "469028", ",", "486178", ",", "503056", ",", 
+   "514736", ",", "522405", ",", "525915", ",", "600392", ",", "609928", ",", 
+   "624184", ",", "635624", ",", "643336", ",", "652664", ",", "667964", ",", 
+   "669688", ",", "686072", ",", "691256", ",", "712216", ",", "726104", ",", 
+   "783556", ",", "796696", ",", "802725", ",", "863835", ",", "879712", ",", 
+   "898216", ",", "901424", ",", "947835", ",", "980984", ",", "998104"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.869160327448776*^9},
+ CellLabel->"Out[60]=",ExpressionUUID->"764f4001-4692-4a90-a491-658cdc5700e0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "10000", "]"}], ",", 
+    RowBox[{
+     RowBox[{"AmicableNumberQ", "[", "#", "]"}], "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8691603315945544`*^9, 3.8691603435350003`*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"7b087cc4-e2f3-41eb-94d9-a7dfffe2b9ea"],
+
+Cell[BoxData["31626"], "Output",
+ CellChangeTimes->{3.8691603438602734`*^9},
+ CellLabel->"Out[61]=",ExpressionUUID->"f598960c-8780-4a57-8f8a-f230f05fea1b"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1119, 981},
+WindowMargins->{{Automatic, 126}, {Automatic, 31}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"687e5f17-dd8a-4329-8386-1d1500c504f0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 137, 3, 96, "Title",ExpressionUUID->"61f819c2-7c5f-45ae-873f-25277f727e78"],
+Cell[720, 27, 611, 14, 166, "Text",ExpressionUUID->"dd4c90b3-03cd-4e48-83be-cd347231debe"],
+Cell[CellGroupData[{
+Cell[1356, 45, 904, 26, 67, "Input",ExpressionUUID->"e8623183-1c0a-4684-9b82-a5065f545653"],
+Cell[2263, 73, 1432, 21, 109, "Output",ExpressionUUID->"764f4001-4692-4a90-a491-658cdc5700e0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3732, 99, 370, 9, 28, "Input",ExpressionUUID->"7b087cc4-e2f3-41eb-94d9-a7dfffe2b9ea"],
+Cell[4105, 110, 155, 2, 32, "Output",ExpressionUUID->"f598960c-8780-4a57-8f8a-f230f05fea1b"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

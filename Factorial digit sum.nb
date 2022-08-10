@@ -1,0 +1,126 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4649,        118]
+NotebookOptionsPosition[      3735,         93]
+NotebookOutlinePosition[      4136,        109]
+CellTagsIndexPosition[      4093,        106]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Factorial digit sum", "Title",
+ CellChangeTimes->{
+  3.8691601822195983`*^9},ExpressionUUID->"e421f642-38be-46ad-b638-\
+c2ebd52c6900"],
+
+Cell["\<\
+n! means n \[Times] (n \[Minus] 1) \[Times] ... \[Times] 3 \[Times] 2 \
+\[Times] 1
+
+For example, 10! = 10 \[Times] 9 \[Times] ... \[Times] 3 \[Times] 2 \[Times] \
+1 = 3628800,
+and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+
+Find the sum of the digits in the number 100!\
+\>", "Text",
+ CellChangeTimes->{
+  3.869160187349247*^9},ExpressionUUID->"d05bbbe7-5b0e-49ea-a18c-\
+b9e4b235e9c1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IntegerDigits", "[", 
+  RowBox[{"100", "!"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8691601913335524`*^9, 3.869160197211977*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"df39e57b-bd73-44f3-b6c1-77145a30675a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "9", ",", "3", ",", "3", ",", "2", ",", "6", ",", "2", ",", "1", ",", "5", 
+   ",", "4", ",", "4", ",", "3", ",", "9", ",", "4", ",", "4", ",", "1", ",", 
+   "5", ",", "2", ",", "6", ",", "8", ",", "1", ",", "6", ",", "9", ",", "9", 
+   ",", "2", ",", "3", ",", "8", ",", "8", ",", "5", ",", "6", ",", "2", ",", 
+   "6", ",", "6", ",", "7", ",", "0", ",", "0", ",", "4", ",", "9", ",", "0", 
+   ",", "7", ",", "1", ",", "5", ",", "9", ",", "6", ",", "8", ",", "2", ",", 
+   "6", ",", "4", ",", "3", ",", "8", ",", "1", ",", "6", ",", "2", ",", "1", 
+   ",", "4", ",", "6", ",", "8", ",", "5", ",", "9", ",", "2", ",", "9", ",", 
+   "6", ",", "3", ",", "8", ",", "9", ",", "5", ",", "2", ",", "1", ",", "7", 
+   ",", "5", ",", "9", ",", "9", ",", "9", ",", "9", ",", "3", ",", "2", ",", 
+   "2", ",", "9", ",", "9", ",", "1", ",", "5", ",", "6", ",", "0", ",", "8", 
+   ",", "9", ",", "4", ",", "1", ",", "4", ",", "6", ",", "3", ",", "9", ",", 
+   "7", ",", "6", ",", "1", ",", "5", ",", "6", ",", "5", ",", "1", ",", "8", 
+   ",", "2", ",", "8", ",", "6", ",", "2", ",", "5", ",", "3", ",", "6", ",", 
+   "9", ",", "7", ",", "9", ",", "2", ",", "0", ",", "8", ",", "2", ",", "7", 
+   ",", "2", ",", "2", ",", "3", ",", "7", ",", "5", ",", "8", ",", "2", ",", 
+   "5", ",", "1", ",", "1", ",", "8", ",", "5", ",", "2", ",", "1", ",", "0", 
+   ",", "9", ",", "1", ",", "6", ",", "8", ",", "6", ",", "4", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.869160197776038*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"cc5af760-25e7-4ce4-a23f-ab950620542b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{"100", "!"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.869160198943467*^9, 3.869160200652377*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"31015777-021b-4b50-bb50-798e47656439"],
+
+Cell[BoxData["648"], "Output",
+ CellChangeTimes->{3.869160201002879*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"29fe6587-59fb-4af7-8618-345c379dc864"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1119, 981},
+WindowMargins->{{Automatic, 151}, {Automatic, 62}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3fb57862-6b68-4a1d-be04-700a43268fce"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 140, 3, 96, "Title",ExpressionUUID->"e421f642-38be-46ad-b638-c2ebd52c6900"],
+Cell[723, 27, 427, 12, 144, "Text",ExpressionUUID->"d05bbbe7-5b0e-49ea-a18c-b9e4b235e9c1"],
+Cell[CellGroupData[{
+Cell[1175, 43, 233, 4, 28, "Input",ExpressionUUID->"df39e57b-bd73-44f3-b6c1-77145a30675a"],
+Cell[1411, 49, 1841, 26, 71, "Output",ExpressionUUID->"cc5af760-25e7-4ce4-a23f-ab950620542b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3289, 80, 264, 5, 28, "Input",ExpressionUUID->"31015777-021b-4b50-bb50-798e47656439"],
+Cell[3556, 87, 151, 2, 53, "Output",ExpressionUUID->"29fe6587-59fb-4af7-8618-345c379dc864"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
