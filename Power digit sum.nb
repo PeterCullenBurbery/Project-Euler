@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1850,         64]
-NotebookOptionsPosition[      1375,         47]
-NotebookOutlinePosition[      1776,         63]
-CellTagsIndexPosition[      1733,         60]
+NotebookDataLength[      2539,         84]
+NotebookOptionsPosition[      1846,         63]
+NotebookOutlinePosition[      2247,         79]
+CellTagsIndexPosition[      2204,         76]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42,7 +42,23 @@ the sum of the digits of the number ",
 }], "Text",
  CellChangeTimes->{{3.8691566400726986`*^9, 
   3.8691566524712276`*^9}},ExpressionUUID->"5ea229f5-f9f9-4164-bdab-\
-4e4e83f3b986"]
+4e4e83f3b986"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"IntegerDigits", "[", 
+   SuperscriptBox["2", "1000"], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.869156673825944*^9, 3.869156681999218*^9}},
+ CellLabel->
+  "In[112]:=",ExpressionUUID->"79dcf0c3-7405-4320-8853-bf909ff578d2"],
+
+Cell[BoxData["1366"], "Output",
+ CellChangeTimes->{3.869156682559859*^9},
+ CellLabel->
+  "Out[112]=",ExpressionUUID->"6fc8d82d-30d1-44a3-90a8-d281f51796e8"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1119, 981},
@@ -64,7 +80,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 162, 3, 96, "Title",ExpressionUUID->"0298e0cf-d593-45ad-bb33-bfc753dbfa9b"],
-Cell[745, 27, 614, 17, 78, "Text",ExpressionUUID->"5ea229f5-f9f9-4164-bdab-4e4e83f3b986"]
+Cell[745, 27, 614, 17, 78, "Text",ExpressionUUID->"5ea229f5-f9f9-4164-bdab-4e4e83f3b986"],
+Cell[CellGroupData[{
+Cell[1384, 48, 275, 6, 32, "Input",ExpressionUUID->"79dcf0c3-7405-4320-8853-bf909ff578d2"],
+Cell[1662, 56, 156, 3, 53, "Output",ExpressionUUID->"6fc8d82d-30d1-44a3-90a8-d281f51796e8"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
