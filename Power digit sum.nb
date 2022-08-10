@@ -1,0 +1,72 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1850,         64]
+NotebookOptionsPosition[      1375,         47]
+NotebookOutlinePosition[      1776,         63]
+CellTagsIndexPosition[      1733,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Power Digit Sum", "Title",
+ CellChangeTimes->{{3.8691566288940125`*^9, 
+  3.8691566318787346`*^9}},ExpressionUUID->"0298e0cf-d593-45ad-bb33-\
+bfc753dbfa9b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "15"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "51f7f26c-fbd4-45b3-91a6-1a06657bd913"],
+ " = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.\n\nWhat is \
+the sum of the digits of the number ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "1000"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e5ec74a5-1856-416f-baa7-74e7505633e1"],
+ "?"
+}], "Text",
+ CellChangeTimes->{{3.8691566400726986`*^9, 
+  3.8691566524712276`*^9}},ExpressionUUID->"5ea229f5-f9f9-4164-bdab-\
+4e4e83f3b986"]
+}, Open  ]]
+},
+WindowSize->{1119, 981},
+WindowMargins->{{Automatic, 126}, {Automatic, 31}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7c19269b-6dc2-4d0b-b9f4-a78a90fe8ecc"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 162, 3, 96, "Title",ExpressionUUID->"0298e0cf-d593-45ad-bb33-bfc753dbfa9b"],
+Cell[745, 27, 614, 17, 78, "Text",ExpressionUUID->"5ea229f5-f9f9-4164-bdab-4e4e83f3b986"]
+}, Open  ]]
+}
+]
+*)
+
