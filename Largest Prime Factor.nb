@@ -1,0 +1,116 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3304,        108]
+NotebookOptionsPosition[      2353,         82]
+NotebookOutlinePosition[      2791,         99]
+CellTagsIndexPosition[      2748,         96]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Largest Prime Factor", "Title",
+ CellChangeTimes->{{3.8691379044643297`*^9, 
+  3.869137906953343*^9}},ExpressionUUID->"805213ac-a4b1-44a9-9f7c-\
+a643f7ca63f1"],
+
+Cell["\<\
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?\
+\>", "Text",
+ CellChangeTimes->{
+  3.869137942234964*^9},ExpressionUUID->"c3707db3-81f4-4b11-a0e6-\
+fbeadf66604f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FactorInteger", "[", "600851475143", "]"}]], "Input",
+ CellChangeTimes->{{3.8691379445499597`*^9, 3.869137956243664*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"479e8fab-bbb3-494c-b8a2-182f7489ffd4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"71", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"839", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1471", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6857", ",", "1"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8691379566736507`*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"6ce06e55-990e-49d9-8b1c-bc301133f75a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Max", "[", 
+  RowBox[{"First", "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"71", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"839", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1471", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6857", ",", "1"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[33]:=",ExpressionUUID->"a75ff6bb-404c-4570-a2aa-587d10aead2c"],
+
+Cell[BoxData["6857"], "Output",
+ CellChangeTimes->{3.8691379608163347`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"c93b1cdf-505f-4158-900e-0493e27d89ff"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{571.8, 509.4},
+WindowMargins->{{
+  Automatic, 2.400000000000091}, {-22.799999999999955`, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b8f17f47-4448-40fb-9994-55f03599f486"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 165, 3, 122, "Title",ExpressionUUID->"805213ac-a4b1-44a9-9f7c-a643f7ca63f1"],
+Cell[748, 27, 236, 7, 130, "Text",ExpressionUUID->"c3707db3-81f4-4b11-a0e6-fbeadf66604f"],
+Cell[CellGroupData[{
+Cell[1009, 38, 224, 3, 35, "Input",ExpressionUUID->"479e8fab-bbb3-494c-b8a2-182f7489ffd4"],
+Cell[1236, 43, 421, 12, 40, "Output",ExpressionUUID->"6ce06e55-990e-49d9-8b1c-bc301133f75a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1694, 60, 474, 14, 60, "Input",ExpressionUUID->"a75ff6bb-404c-4570-a2aa-587d10aead2c"],
+Cell[2171, 76, 154, 2, 40, "Output",ExpressionUUID->"c93b1cdf-505f-4158-900e-0493e27d89ff"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

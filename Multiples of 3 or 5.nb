@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9666,        194]
-NotebookOptionsPosition[      8620,        167]
-NotebookOutlinePosition[      9057,        184]
-CellTagsIndexPosition[      9014,        181]
+NotebookDataLength[      9827,        198]
+NotebookOptionsPosition[      8781,        171]
+NotebookOutlinePosition[      9218,        188]
+CellTagsIndexPosition[      9175,        185]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,9 +35,13 @@ Find the sum of all the multiples of 3 or 5 below 1000.\
   3.869136381318774*^9}},ExpressionUUID->"c8c6bb56-7ff7-4568-afff-\
 a04992438880"],
 
-Cell["Find the numbers", "Text",
- CellChangeTimes->{{3.869136543614097*^9, 
-  3.8691365465801105`*^9}},ExpressionUUID->"928450b5-e9ee-476f-af9c-\
+Cell["\<\
+Find the numbers by selecting numbers divisible by 3 or 5 from numbers up to \
+1000 except for 1000. Most discards 1000.\
+\>", "Text",
+ CellChangeTimes->{{3.869136543614097*^9, 3.8691365465801105`*^9}, {
+  3.869136581270152*^9, 
+  3.869136607811987*^9}},ExpressionUUID->"928450b5-e9ee-476f-af9c-\
 8e5aa26395a4"],
 
 Cell[CellGroupData[{
@@ -186,14 +190,14 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 166, 3, 122, "Title",ExpressionUUID->"6e8d5cf3-2d39-49f4-a8e3-49adb03e22b5"],
 Cell[749, 27, 340, 8, 101, "Text",ExpressionUUID->"c8c6bb56-7ff7-4568-afff-a04992438880"],
-Cell[1092, 37, 160, 3, 43, "Text",ExpressionUUID->"928450b5-e9ee-476f-af9c-8e5aa26395a4"],
+Cell[1092, 37, 321, 7, 43, "Text",ExpressionUUID->"928450b5-e9ee-476f-af9c-8e5aa26395a4"],
 Cell[CellGroupData[{
-Cell[1277, 44, 528, 13, 35, "Input",ExpressionUUID->"0d040cff-0131-401b-bf7e-e001e89bf096"],
-Cell[1808, 59, 6047, 82, 516, "Output",ExpressionUUID->"83087437-e57c-4fe7-8dc4-4cf01c31b025"]
+Cell[1438, 48, 528, 13, 35, "Input",ExpressionUUID->"0d040cff-0131-401b-bf7e-e001e89bf096"],
+Cell[1969, 63, 6047, 82, 516, "Output",ExpressionUUID->"83087437-e57c-4fe7-8dc4-4cf01c31b025"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7892, 146, 518, 13, 35, "Input",ExpressionUUID->"aff9e04a-3fa3-43d0-8b85-6434a75e0e76"],
-Cell[8413, 161, 179, 2, 60, "Output",ExpressionUUID->"93ff3b3e-4250-4709-acab-7583b1191165"]
+Cell[8053, 150, 518, 13, 35, "Input",ExpressionUUID->"aff9e04a-3fa3-43d0-8b85-6434a75e0e76"],
+Cell[8574, 165, 179, 2, 60, "Output",ExpressionUUID->"93ff3b3e-4250-4709-acab-7583b1191165"]
 }, Open  ]]
 }, Open  ]]
 }
