@@ -10,18 +10,161 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1109,         40]
-NotebookOptionsPosition[       721,         25]
-NotebookOutlinePosition[      1158,         42]
-CellTagsIndexPosition[      1115,         39]
+NotebookDataLength[      7064,        208]
+NotebookOptionsPosition[      5268,        168]
+NotebookOutlinePosition[      5705,        185]
+CellTagsIndexPosition[      5662,        182]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell["Pandigital prime", "Title",
  CellChangeTimes->{{3.869318226762941*^9, 
   3.869318261786624*^9}},ExpressionUUID->"7d83c2de-7278-4781-a9c2-\
-7990b19fb193"]
+7990b19fb193"],
+
+Cell["\<\
+We shall say that an n-digit number is pandigital if it makes use of all the \
+digits 1 to n exactly once. For example, 2143 is a 4-digit pandigital and is \
+also prime.
+
+What is the largest n-digit pandigital prime that exists?\
+\>", "Text",
+ CellChangeTimes->{
+  3.8693182815906286`*^9},ExpressionUUID->"b7aeca2f-4e6c-406c-9c6c-\
+f76eb77d0fe1"],
+
+Cell[BoxData["2143"], "Input",
+ CellChangeTimes->{{3.8693182846236577`*^9, 
+  3.8693182868246336`*^9}},ExpressionUUID->"b0b1f909-7376-4983-84a5-\
+5bdbad32e930"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"PrimeQ", "[", "#", "]"}], "&"}], "[", "2143", "]"}]], "Input",
+ CellChangeTimes->{{3.869318288775628*^9, 3.869318296069632*^9}},
+ CellLabel->
+  "In[602]:=",ExpressionUUID->"19e4a572-eb54-403c-be92-d269ea461f00"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.8693182965526223`*^9},
+ CellLabel->
+  "Out[602]=",ExpressionUUID->"3092ca18-33bb-4fef-b1cb-5ed5aaa5e456"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ContainsExactly", "[", 
+    RowBox[{
+     RowBox[{"IntegerDigits", "[", "#", "]"}], ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"IntegerLength", "[", "#", "]"}], "]"}]}], "]"}], "&"}], "[", 
+  "2143", "]"}]], "Input",
+ CellChangeTimes->{{3.8693182981046534`*^9, 3.869318320627637*^9}},
+ CellLabel->
+  "In[603]:=",ExpressionUUID->"ce10fb16-7136-4181-b39c-b31dd1f94e64"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.8693183210456343`*^9},
+ CellLabel->
+  "Out[603]=",ExpressionUUID->"c72047d8-0663-406a-b46c-648e6ce6da1f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"ContainsExactly", "[", 
+     RowBox[{
+      RowBox[{"IntegerDigits", "[", "#", "]"}], ",", 
+      RowBox[{"Range", "[", 
+       RowBox[{"IntegerLength", "[", "#", "]"}], "]"}]}], "]"}], "&"}], "]"}],
+   "[", 
+  RowBox[{
+   RowBox[{"Select", "[", "PrimeQ", "]"}], "[", 
+   RowBox[{"Range", "[", 
+    SuperscriptBox["10", "9"], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8693183233326287`*^9, 3.869318332612644*^9}, {
+   3.8693184295719557`*^9, 3.8693184493779373`*^9}, 
+   3.8693185485155563`*^9},ExpressionUUID->"2ec9f5ae-b194-47a1-bfc2-\
+c2a1b8ac8537"],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.8693185529041324`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"f6d50a21-f43e-4b06-bdb5-46021b86509e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<MonitorProgress\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"ContainsExactly", "[", 
+      RowBox[{
+       RowBox[{"IntegerDigits", "[", "#", "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"IntegerLength", "[", "#", "]"}], "]"}]}], "]"}], "&"}], 
+    "]"}], "[", 
+   RowBox[{
+    RowBox[{"Select", "[", "PrimeQ", "]"}], "[", 
+    RowBox[{"Range", "[", 
+     SuperscriptBox["10", "5"], "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8693185572761183`*^9, 3.869318582132069*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"acb843d3-89c2-4378-bc7d-f4913a3d6ed5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1423", ",", "2143", ",", "2341", ",", "4231"}], "}"}]], "Output",
+ CellChangeTimes->{{3.869318575941224*^9, 3.869318583690132*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"8843acda-e74b-4aa3-9461-03773bb1f22f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<MonitorProgress\>\"", "]"}], "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"ContainsExactly", "[", 
+      RowBox[{
+       RowBox[{"IntegerDigits", "[", "#", "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"IntegerLength", "[", "#", "]"}], "]"}]}], "]"}], "&"}], 
+    "]"}], "[", 
+   RowBox[{
+    RowBox[{"Select", "[", "PrimeQ", "]"}], "[", 
+    RowBox[{"Range", "[", 
+     SuperscriptBox["10", "6"], "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8693185572761183`*^9, 3.8693185905731354`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"3474c003-0b9a-4919-8a2f-1ceffa40dae0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1423", ",", "2143", ",", "2341", ",", "4231"}], "}"}]], "Output",
+ CellChangeTimes->{3.8693185967293944`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"5f53eb0a-bfdd-40c6-8027-8107479a9b06"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8693183390536184`*^9, 
+  3.8693183531016216`*^9}},ExpressionUUID->"ef39c551-d46a-45c2-a1d7-\
+b3f4a87ab1dc"]
+}, Open  ]]
 },
 WindowSize->{1152., 585.6},
 WindowMargins->{{
@@ -41,10 +184,33 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 159, 3, 122, "Title",ExpressionUUID->"7d83c2de-7278-4781-a9c2-7990b19fb193"]
+Cell[CellGroupData[{
+Cell[580, 22, 159, 3, 122, "Title",ExpressionUUID->"7d83c2de-7278-4781-a9c2-7990b19fb193"],
+Cell[742, 27, 356, 9, 130, "Text",ExpressionUUID->"b7aeca2f-4e6c-406c-9c6c-f76eb77d0fe1"],
+Cell[1101, 38, 160, 3, 35, "Input",ExpressionUUID->"b0b1f909-7376-4983-84a5-5bdbad32e930"],
+Cell[CellGroupData[{
+Cell[1286, 45, 258, 6, 35, "Input",ExpressionUUID->"19e4a572-eb54-403c-be92-d269ea461f00"],
+Cell[1547, 53, 158, 3, 40, "Output",ExpressionUUID->"3092ca18-33bb-4fef-b1cb-5ed5aaa5e456"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1742, 61, 419, 11, 35, "Input",ExpressionUUID->"ce10fb16-7136-4181-b39c-b31dd1f94e64"],
+Cell[2164, 74, 158, 3, 40, "Output",ExpressionUUID->"c72047d8-0663-406a-b46c-648e6ce6da1f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2359, 82, 638, 17, 40, "Input",ExpressionUUID->"2ec9f5ae-b194-47a1-bfc2-c2a1b8ac8537"],
+Cell[3000, 101, 157, 2, 40, "Output",ExpressionUUID->"f6d50a21-f43e-4b06-bdb5-46021b86509e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3194, 108, 683, 17, 66, "Input",ExpressionUUID->"acb843d3-89c2-4378-bc7d-f4913a3d6ed5"],
+Cell[3880, 127, 249, 4, 40, "Output",ExpressionUUID->"8843acda-e74b-4aa3-9461-03773bb1f22f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4166, 136, 685, 17, 66, "Input",ExpressionUUID->"3474c003-0b9a-4919-8a2f-1ceffa40dae0"],
+Cell[4854, 155, 227, 4, 40, "Output",ExpressionUUID->"5f53eb0a-bfdd-40c6-8027-8107479a9b06"]
+}, Open  ]],
+Cell[5096, 162, 156, 3, 35, "Input",ExpressionUUID->"ef39c551-d46a-45c2-a1d7-b3f4a87ab1dc"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
