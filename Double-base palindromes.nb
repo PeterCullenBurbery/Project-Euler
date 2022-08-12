@@ -1,0 +1,214 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6905,        206]
+NotebookOptionsPosition[      5200,        167]
+NotebookOutlinePosition[      5637,        184]
+CellTagsIndexPosition[      5594,        181]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Double-base palindromes", "Title",
+ CellChangeTimes->{
+  3.8693102672057104`*^9},ExpressionUUID->"befdb834-0076-4a9d-9b51-\
+d389ad486c19"],
+
+Cell["\<\
+The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
+
+Find the sum of all numbers, less than one million, which are palindromic in \
+base 10 and base 2.
+
+(Please note that the palindromic number, in either base, may not include \
+leading zeros.)\
+\>", "Text",
+ CellChangeTimes->{
+  3.869310275248708*^9},ExpressionUUID->"b115fba5-57dc-4da9-a3ba-\
+00cf1f524242"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PalindromeQ", "[", 
+  RowBox[{"585", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.869310280746708*^9, 3.869310289204723*^9}},
+ CellLabel->
+  "In[362]:=",ExpressionUUID->"840d7bdf-62b1-41d2-a895-ae15b6307b2b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "PalindromeQ", "nonopt", 
+   "\"Options expected (instead of \\!\\(\\*RowBox[{\\\"2\\\"}]\\)) beyond \
+position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"PalindromeQ\\\", \\\"[\\\", RowBox[{\\\"585\\\", \\\",\\\
+\", \\\"2\\\"}], \\\"]\\\"}]\\). An option must be a rule or a list of rules.\
+\"", 2, 362, 63, 19461087210519376642, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.86931028999127*^9},
+ CellLabel->
+  "During evaluation of \
+In[362]:=",ExpressionUUID->"85fbc7c1-999d-4975-9621-8a9e73b8014b"],
+
+Cell[BoxData[
+ RowBox[{"PalindromeQ", "[", 
+  RowBox[{"585", ",", "2"}], "]"}]], "Output",
+ CellChangeTimes->{3.869310290087279*^9},
+ CellLabel->
+  "Out[362]=",ExpressionUUID->"3a409057-4d2f-4225-ad43-d7baf284a6a5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IntegerDigits", "[", 
+  RowBox[{"585", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.869310466137283*^9, 3.869310470955284*^9}},
+ CellLabel->
+  "In[363]:=",ExpressionUUID->"133427af-4829-40f0-98ec-df4efe6cadb4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", 
+   ",", "0", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{3.8693104716522818`*^9},
+ CellLabel->
+  "Out[363]=",ExpressionUUID->"74055517-2937-4d7f-ae06-6cf110a11927"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{"585", ",", "2"}], "]"}], "==", 
+  RowBox[{"Reverse", "[", 
+   RowBox[{"IntegerDigits", "[", 
+    RowBox[{"585", ",", "2"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.869310466137283*^9, 3.869310480203268*^9}},
+ CellLabel->
+  "In[364]:=",ExpressionUUID->"1d9aa60c-b2fb-47e6-9c63-80b75b96ffce"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.8693104806083045`*^9},
+ CellLabel->
+  "Out[364]=",ExpressionUUID->"2ebfd67a-0d04-4214-a1f7-34910f0b2d9d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PalindromeQ", "[", "#", "]"}], "\[And]", 
+     RowBox[{
+      RowBox[{"IntegerDigits", "[", 
+       RowBox[{"#", ",", "2"}], "]"}], "==", 
+      RowBox[{"Reverse", "[", 
+       RowBox[{"IntegerDigits", "[", 
+        RowBox[{"#", ",", "2"}], "]"}], "]"}]}]}], "&"}], "]"}], "[", 
+  RowBox[{"Range", "[", "1000000", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.869310485941279*^9, 3.869310515215279*^9}},
+ CellLabel->
+  "In[365]:=",ExpressionUUID->"c6078a12-0d7c-4132-8a1a-ffd8f5c6df9b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "3", ",", "5", ",", "7", ",", "9", ",", "33", ",", "99", ",", 
+   "313", ",", "585", ",", "717", ",", "7447", ",", "9009", ",", "15351", ",",
+    "32223", ",", "39993", ",", "53235", ",", "53835", ",", "73737", ",", 
+   "585585"}], "}"}]], "Output",
+ CellChangeTimes->{3.869310524165279*^9},
+ CellLabel->
+  "Out[365]=",ExpressionUUID->"238f96f8-0334-4c65-9836-db33078d05c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"PalindromeQ", "[", "#", "]"}], "\[And]", 
+      RowBox[{
+       RowBox[{"IntegerDigits", "[", 
+        RowBox[{"#", ",", "2"}], "]"}], "==", 
+       RowBox[{"Reverse", "[", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"#", ",", "2"}], "]"}], "]"}]}]}], "&"}], "]"}], "[", 
+   RowBox[{"Range", "[", "1000000", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.869310526917276*^9, 3.869310528646288*^9}},
+ CellLabel->
+  "In[366]:=",ExpressionUUID->"b45706a2-93f5-4dc6-b21b-534b091f264b"],
+
+Cell[BoxData["872187"], "Output",
+ CellChangeTimes->{3.8693105375412655`*^9},
+ CellLabel->
+  "Out[366]=",ExpressionUUID->"6ddf7301-3f27-472e-94f2-eb91e939ec91"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a070ff0b-96d2-4dcd-8207-cde41e718901"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 144, 3, 122, "Title",ExpressionUUID->"befdb834-0076-4a9d-9b51-d389ad486c19"],
+Cell[727, 27, 396, 11, 158, "Text",ExpressionUUID->"b115fba5-57dc-4da9-a3ba-00cf1f524242"],
+Cell[CellGroupData[{
+Cell[1148, 42, 238, 5, 35, "Input",ExpressionUUID->"840d7bdf-62b1-41d2-a895-ae15b6307b2b"],
+Cell[1389, 49, 574, 12, 35, "Message",ExpressionUUID->"85fbc7c1-999d-4975-9621-8a9e73b8014b"],
+Cell[1966, 63, 215, 5, 40, "Output",ExpressionUUID->"3a409057-4d2f-4225-ad43-d7baf284a6a5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2218, 73, 240, 5, 35, "Input",ExpressionUUID->"133427af-4829-40f0-98ec-df4efe6cadb4"],
+Cell[2461, 80, 287, 7, 40, "Output",ExpressionUUID->"74055517-2937-4d7f-ae06-6cf110a11927"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2785, 92, 367, 9, 35, "Input",ExpressionUUID->"1d9aa60c-b2fb-47e6-9c63-80b75b96ffce"],
+Cell[3155, 103, 158, 3, 40, "Output",ExpressionUUID->"2ebfd67a-0d04-4214-a1f7-34910f0b2d9d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3350, 111, 575, 15, 35, "Input",ExpressionUUID->"c6078a12-0d7c-4132-8a1a-ffd8f5c6df9b"],
+Cell[3928, 128, 426, 9, 40, "Output",ExpressionUUID->"238f96f8-0334-4c65-9836-db33078d05c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4391, 142, 618, 16, 35, "Input",ExpressionUUID->"b45706a2-93f5-4dc6-b21b-534b091f264b"],
+Cell[5012, 160, 160, 3, 40, "Output",ExpressionUUID->"6ddf7301-3f27-472e-94f2-eb91e939ec91"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
