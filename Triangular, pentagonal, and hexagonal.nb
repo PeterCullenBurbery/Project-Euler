@@ -1,0 +1,65 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1567,         57]
+NotebookOptionsPosition[      1179,         42]
+NotebookOutlinePosition[      1616,         59]
+CellTagsIndexPosition[      1573,         56]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"a", "[", "n_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ChebyshevU", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", " ", "n"}], "-", "3"}], ",", "7"}], "]"}], "/", "14"}], 
+    "+", 
+    RowBox[{
+     RowBox[{"ChebyshevT", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", " ", "n"}], "-", "3"}], ",", "7"}], "]"}], "/", "84"}], 
+    "-", 
+    RowBox[{"1", "/", "12"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.869325330335282*^9, 3.869325330338254*^9}},
+ CellLabel->
+  "In[245]:=",ExpressionUUID->"5a15ce71-1fc8-41c1-9f38-862f45ce1663"]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c8fb56af-3df3-4e0c-a2f7-63a2b7c2802f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 617, 20, 64, "Input",ExpressionUUID->"5a15ce71-1fc8-41c1-9f38-862f45ce1663"]
+}
+]
+*)
+
