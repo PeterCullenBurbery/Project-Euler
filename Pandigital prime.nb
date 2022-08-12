@@ -1,0 +1,50 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1109,         40]
+NotebookOptionsPosition[       721,         25]
+NotebookOutlinePosition[      1158,         42]
+CellTagsIndexPosition[      1115,         39]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Pandigital prime", "Title",
+ CellChangeTimes->{{3.869318226762941*^9, 
+  3.869318261786624*^9}},ExpressionUUID->"7d83c2de-7278-4781-a9c2-\
+7990b19fb193"]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"28aba0d2-23cd-48f1-b12d-c342d1a9e643"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 159, 3, 122, "Title",ExpressionUUID->"7d83c2de-7278-4781-a9c2-7990b19fb193"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
