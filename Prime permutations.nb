@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    266329,       4964]
-NotebookOptionsPosition[    253447,       4734]
-NotebookOutlinePosition[    253884,       4751]
-CellTagsIndexPosition[    253841,       4748]
+NotebookDataLength[    270542,       5081]
+NotebookOptionsPosition[    257204,       4843]
+NotebookOutlinePosition[    257641,       4860]
+CellTagsIndexPosition[    257598,       4857]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -4093,7 +4093,7 @@ Cell[BoxData[
      RowBox[{"IntegerDigits", "[", "m", "]"}], "]"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.8693287961820035`*^9, 3.8693288135869904`*^9}},
  CellLabel->
-  "In[366]:=",ExpressionUUID->"e7148d65-94e1-4db5-b499-10655f8e64f7"],
+  "In[392]:=",ExpressionUUID->"e7148d65-94e1-4db5-b499-10655f8e64f7"],
 
 Cell[CellGroupData[{
 
@@ -4728,6 +4728,115 @@ Cell[BoxData["296962999629"], "Output",
  CellChangeTimes->{3.869329312161798*^9},
  CellLabel->
   "Out[391]=",ExpressionUUID->"4e844f93-4754-4c31-b4db-56bc635c4542"]
+}, Open  ]],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.869329448605383*^9, 3.8693294492603874`*^9}},
+ CellLabel->
+  "In[393]:=",ExpressionUUID->"1b692181-6959-44be-a6c0-af26386671a8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Final Solution", "Section",
+ CellChangeTimes->{{3.869329499922262*^9, 
+  3.869329504267249*^9}},ExpressionUUID->"463c904b-def1-4fbb-843b-\
+1cb9959c262f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fourdigitprimes", "=", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"PrimeQ", "[", "#", "]"}], "&"}], "]"}], "[", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1000", ",", "10000"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"PrimeDigitPermutations", "[", 
+     RowBox[{"m_", "?", "PrimeQ"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Select", "[", "PrimeQ", "]"}], "[", 
+     RowBox[{"FromDigits", "/@", 
+      RowBox[{"Permutations", "[", 
+       RowBox[{"IntegerDigits", "[", "m", "]"}], "]"}]}], "]"}]}], 
+   ";"}]}], "\[IndentingNewLine]", 
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"PrimePermutations", "[", 
+     RowBox[{"m_", "?", "PrimeQ"}], "]"}], ":=", 
+    RowBox[{"Prepend", "[", 
+     RowBox[{
+      RowBox[{"Extract", "[", 
+       RowBox[{
+        RowBox[{"Rest", "[", 
+         RowBox[{"PrimeDigitPermutations", "[", "m", "]"}], "]"}], ",", 
+        RowBox[{"Position", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Rest", "[", 
+            RowBox[{"PrimeDigitPermutations", "[", "m", "]"}], "]"}], "-", 
+           "m"}], ",", 
+          RowBox[{"Alternatives", "@@", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Select", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Last", "[", "#", "]"}], "/", 
+                 RowBox[{"First", "[", "#", "]"}]}], "==", "2"}], "&"}], 
+              "]"}], "[", 
+             RowBox[{"Tuples", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Rest", "[", 
+                 RowBox[{"PrimeDigitPermutations", "[", "m", "]"}], "]"}], 
+                "-", "m"}], ",", "2"}], "]"}], "]"}], "]"}]}]}], "]"}]}], 
+       "]"}], ",", "m"}], "]"}]}], ";"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FromDigits", "[", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"IntegerDigits", "[", 
+     RowBox[{"First", "[", 
+      RowBox[{"DeleteDuplicates", "[", 
+       RowBox[{"Sort", "/@", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"SameQ", "@@", 
+            RowBox[{"(", 
+             RowBox[{"Sort", "/@", 
+              RowBox[{"IntegerDigits", "[", "#", "]"}]}], ")"}]}], "&"}], 
+          "]"}], "[", 
+         RowBox[{"PrimePermutations", "/@", 
+          RowBox[{"DeleteElements", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Select", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Length", "[", 
+                 RowBox[{"PrimePermutations", "[", "#", "]"}], "]"}], "==", 
+                "3"}], "&"}], "]"}], "[", "fourdigitprimes", "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1487", ",", "4817", ",", "8147"}], "}"}]}], "]"}]}], 
+         "]"}]}], "]"}], "]"}], "]"}], "]"}], "]"}], "//", 
+  "RepeatedTiming"}]}], "Input",
+ CellChangeTimes->{{3.8693295054492435`*^9, 3.869329563512244*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"5c50d46b-dd55-4dad-b0ca-43d0467aafaf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.187571375`", ",", "296962999629"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8693295367942533`*^9, 3.869329565620241*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"abd66abe-2d77-4474-be4f-a2556b26d228"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -4963,6 +5072,14 @@ Cell[251749, 4682, 243, 6, 40, "Output",ExpressionUUID->"8378cb1d-c375-4e09-af96
 Cell[CellGroupData[{
 Cell[252029, 4693, 1211, 31, 178, "Input",ExpressionUUID->"705c60e8-c9ef-4c6c-b420-448267f0167f"],
 Cell[253243, 4726, 164, 3, 40, "Output",ExpressionUUID->"4e844f93-4754-4c31-b4db-56bc635c4542"]
+}, Open  ]],
+Cell[253422, 4732, 181, 3, 35, "Input",ExpressionUUID->"1b692181-6959-44be-a6c0-af26386671a8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[253640, 4740, 159, 3, 83, "Section",ExpressionUUID->"463c904b-def1-4fbb-843b-1cb9959c262f"],
+Cell[CellGroupData[{
+Cell[253824, 4747, 3096, 85, 369, "Input",ExpressionUUID->"5c50d46b-dd55-4dad-b0ca-43d0467aafaf"],
+Cell[256923, 4834, 241, 4, 40, "Output",ExpressionUUID->"abd66abe-2d77-4474-be4f-a2556b26d228"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
